@@ -186,34 +186,107 @@ document.addEventListener("DOMContentLoaded", () => {
     closeCalendar();
   });
 
-  // WhatsApp Form Handler
-  const inquiryForm = document.getElementById("inquiry-form");
+  // WhatsApp Form Handler (Robust support for both Wedding & Corporate inquiries)
+  function handleWhatsAppSubmit() {
+    const name = (document.getElementById("clientName")?.value || document.getElementById("fullName")?.value || "").trim();
+    const email = (document.getElementById("clientEmail")?.value || "").trim();
+    const phone = (document.getElementById("clientPhone")?.value || document.getElementById("contactNumber")?.value || "").trim();
+    const eventType = document.getElementById("eventType")?.value || "";
+    const eventDate = document.getElementById("eventDate")?.value || document.getElementById("eventDateDisplay")?.value || "";
+    const location = (document.getElementById("eventLocation")?.value || document.getElementById("city")?.value || "").trim();
+    const details = (document.getElementById("eventDetails")?.value || document.getElementById("message")?.value || "").trim();
+
+    if (!name || !phone) {
+      alert("Please enter your name and phone/WhatsApp number.");
+      return;
+    }
+
+    const isCorporate = window.location.href.includes("corporate");
+    const heading = isCorporate ? "*New Corporate RFP / Commission Inquiry*" : "*New Wedding Photography Inquiry*";
+
+    let message = `${heading}\n\n` +
+      `*Name / Contact:* ${name}\n` +
+      (email ? `*Email:* ${email}\n` : "") +
+      `*Phone / WhatsApp:* ${phone}\n` +
+      (eventType ? `*Event Type:* ${eventType}\n` : "") +
+      (eventDate ? `*Event Date:* ${eventDate}\n` : "") +
+      (location ? `*Venue / Location:* ${location}\n` : "") +
+      (details ? `*Details & Vision:* ${details}\n` : "");
+
+    const encodedMessage = encodeURIComponent(message);
+    const whatsappUrl = `https://wa.me/${STUDIO_WHATSAPP_NUMBER}?text=${encodedMessage}`;
+    window.open(whatsappUrl, "_blank");
+  }
+
+  const submitWhatsappBtn = document.getElementById("submitWhatsapp");
+  if (submitWhatsappBtn) {
+    submitWhatsappBtn.addEventListener("click", (e) => {
+      e.preventDefault();
+      handleWhatsAppSubmit();
+    });
+  }
+
+  const inquiryForm = document.getElementById("inquiryForm") || document.getElementById("inquiry-form");
   if (inquiryForm) {
     inquiryForm.addEventListener("submit", function (e) {
       e.preventDefault();
-
-      const fullName = document.getElementById("fullName")?.value.trim() || "";
-      const contactNumber =
-        document.getElementById("contactNumber")?.value.trim() || "";
-      const eventType = document.getElementById("eventType")?.value || "";
-      const eventDate = document.getElementById("eventDate")?.value || "";
-      const city = document.getElementById("city")?.value.trim() || "";
-      const message = document.getElementById("message")?.value.trim() || "";
-
-      const formattedMessage =
-        `*New Photography Inquiry*\n\n` +
-        `*Name:* ${fullName}\n` +
-        `*Contact Number:* ${contactNumber}\n` +
-        `*Event Type:* ${eventType}\n` +
-        `*Date:* ${eventDate}\n` +
-        `*City / Location:* ${city}\n` +
-        (message ? `*Additional Notes:* ${message}\n` : "");
-
-      const encodedMessage = encodeURIComponent(formattedMessage);
-      const whatsappUrl = `https://wa.me/${STUDIO_WHATSAPP_NUMBER}?text=${encodedMessage}`;
-
-      window.open(whatsappUrl, "_blank");
+      handleWhatsAppSubmit();
     });
+  }
+
+  // Hero Image Carousel (Auto-rotates every 5 seconds with Arrow Navigation)
+  const carouselTrack = document.getElementById("heroCarousel");
+  if (carouselTrack) {
+    const slides = carouselTrack.querySelectorAll(".carousel-slide");
+    const prevBtn = document.getElementById("heroCarouselPrev");
+    const nextBtn = document.getElementById("heroCarouselNext");
+    let currentSlide = 0;
+    let carouselTimer = null;
+
+    if (slides.length > 0) {
+      function updateSlideClasses() {
+        slides.forEach((slide, idx) => {
+          slide.classList.toggle("active", idx === currentSlide);
+        });
+      }
+
+      function nextSlide() {
+        currentSlide = (currentSlide + 1) % slides.length;
+        updateSlideClasses();
+      }
+
+      function prevSlide() {
+        currentSlide = (currentSlide - 1 + slides.length) % slides.length;
+        updateSlideClasses();
+      }
+
+      function startCarouselTimer() {
+        carouselTimer = setInterval(nextSlide, 5000);
+      }
+
+      function resetCarouselTimer() {
+        if (carouselTimer) clearInterval(carouselTimer);
+        startCarouselTimer();
+      }
+
+      if (prevBtn) {
+        prevBtn.addEventListener("click", (e) => {
+          e.stopPropagation();
+          prevSlide();
+          resetCarouselTimer();
+        });
+      }
+
+      if (nextBtn) {
+        nextBtn.addEventListener("click", (e) => {
+          e.stopPropagation();
+          nextSlide();
+          resetCarouselTimer();
+        });
+      }
+
+      startCarouselTimer();
+    }
   }
 
   // Back to Top Handler
@@ -224,3 +297,4 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 });
+
