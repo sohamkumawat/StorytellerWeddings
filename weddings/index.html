@@ -7,7 +7,7 @@
   <title>Storyteller Weddings | Bespoke Wedding & Documentary Photography</title>
   <meta name="description"
     content="Documentary wedding and intimate gathering photography based in Pune, available nationwide across India. Preserving honest emotion and heirloom legacy." />
-  <link rel="icon" type="image/png" href="../LogoFavicon.png" />
+  <link rel="icon" type="image/svg+xml" href="../MainLogo2.svg" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link
@@ -19,19 +19,21 @@
 
 <body>
   <!-- Weddings Masthead & Navigation -->
-  <header class="wedding-masthead">
-    <div class="masthead-brand-wrap">
-      <a href="weddings-home.html" class="masthead-logo-link" aria-label="Storyteller Home">
-        <img style="width: auto; height: 85px;" src="../MainLogo.svg" alt="Storyteller Weddings" class="masthead-favicon" />
+      <header class="nav">
+    <div class="logo-bar">
+      <a href="weddings-home.html" class="brand">
+        <img src="../LogoFavicon.png" alt="Storyteller Weddings" class="brand-logo" />
+        <span class="brand-text">Storyteller Weddings</span>
       </a>
     </div>
-    <nav class="masthead-nav" aria-label="Weddings Navigation">
-      <ul class="masthead-nav-links">
+    <div class="logo-break-line"></div>
+    <nav class="floating-navbar" aria-label="Navigation">
+      <ul class="nav-links">
         <li><a href="weddings-home.html" class="active">Home</a></li>
         <li><a href="weddings-editorial.html">Galleries</a></li>
         <li><a href="#testimonials">Testimonials</a></li>
         <li><a href="weddings-about.html">About</a></li>
-        <li><a href="weddings-inquire.html">Enquire</a></li>
+        <li><a href="weddings-inquire.html" class="btn-inquire">Enquire</a></li>
       </ul>
     </nav>
   </header>
@@ -43,34 +45,19 @@
       <div class="hero-carousel-container" aria-label="Wedding Highlights Showcase">
         <div class="hero-carousel-track" id="heroCarousel">
           <div class="carousel-slide active">
-            <img src="https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=1400&q=80" alt="Bespoke sunset wedding couple" loading="eager" />
+            <img src="assets/main-carousel/MainCarousel1.webp" alt="Bespoke wedding moment 1" loading="eager" />
           </div>
           <div class="carousel-slide">
-            <img src="https://images.unsplash.com/photo-1583939003579-730e3918a45a?auto=format&fit=crop&w=1400&q=80" alt="Traditional bridal varmala ceremony" loading="lazy" />
+            <img src="assets/main-carousel/MainCarousel2.webp" alt="Bespoke wedding moment 2" loading="lazy" />
           </div>
           <div class="carousel-slide">
-            <img src="https://images.unsplash.com/photo-1511285560929-80b456fea0bc?auto=format&fit=crop&w=1400&q=80" alt="Heirloom celebration banquet details" loading="lazy" />
+            <img src="assets/main-carousel/MainCarousel3.webp" alt="Bespoke wedding moment 3" loading="lazy" />
           </div>
           <div class="carousel-slide">
-            <img src="https://images.unsplash.com/photo-1606800052052-a08af7148866?auto=format&fit=crop&w=1400&q=80" alt="Emotional vows exchange" loading="lazy" />
+            <img src="assets/main-carousel/MainCarousel4.webp" alt="Bespoke wedding moment 4" loading="lazy" />
           </div>
           <div class="carousel-slide">
-            <img src="https://images.unsplash.com/photo-1520854221256-17451cc331bf?auto=format&fit=crop&w=1400&q=80" alt="Editorial fine art bride portrait" loading="lazy" />
-          </div>
-          <div class="carousel-slide">
-            <img src="https://images.unsplash.com/photo-1532712938310-34cb3982ef74?auto=format&fit=crop&w=1400&q=80" alt="Intimate black and white reception dance" loading="lazy" />
-          </div>
-          <div class="carousel-slide">
-            <img src="https://images.unsplash.com/photo-1591604466107-ec97de577aff?auto=format&fit=crop&w=1400&q=80" alt="Destination royal heritage palace wedding" loading="lazy" />
-          </div>
-          <div class="carousel-slide">
-            <img src="https://images.unsplash.com/photo-1545232979-8bf68ee9b1af?auto=format&fit=crop&w=1400&q=80" alt="Pre-wedding editorial couple stroll" loading="lazy" />
-          </div>
-          <div class="carousel-slide">
-            <img src="https://images.unsplash.com/photo-1517457373958-b7bdd4587205?auto=format&fit=crop&w=1400&q=80" alt="Candlelit private wedding gathering" loading="lazy" />
-          </div>
-          <div class="carousel-slide">
-            <img src="https://images.unsplash.com/photo-1544078751-58fee2d8a03b?auto=format&fit=crop&w=1400&q=80" alt="Quiet intimate connection" loading="lazy" />
+            <img src="assets/main-carousel/MainCarousel5.webp" alt="Bespoke wedding moment 5" loading="lazy" />
           </div>
         </div>
 
@@ -106,37 +93,555 @@
       </div>
     </section>
 
-    <!-- Selected Wedding Disciplines -->
-    <section class="portfolio-section" id="portfolio">
-      <div class="section-header">
-        <span class="section-tag">01 / Curated Disciplines</span>
+    <!-- Curated Stories & Infinite Film Reel -->
+    <section
+      class="film-carousel-section"
+      id="portfolio"
+      aria-label="Curated Wedding Film Showcase"
+    >
+      <div class="film-carousel-header">
+        <div class="film-tag-row">
+          <span class="section-tag">01 / Curated Stories &amp; Film Archive</span>
+          <div class="film-live-indicator">
+            <span class="film-pulse-dot"></span>
+            <span>Continuous Film Reel</span>
+          </div>
+        </div>
+        <h2 class="section-editorial-title">
+          Moments caught in motion, preserved in perpetuity.
+        </h2>
+        <p class="section-editorial-sub">
+          An unscripted tapestry of heirloom rituals, quiet tears, and high-spirited celebrations. Hover to pause and inspect the archives.
+        </p>
       </div>
 
-      <div class="cards-grid">
-        <div class="card-item" id="weddings">
-          <a href="weddings-editorial.html" class="card">
-            <div class="image-container">
-              <img src="https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=1000&q=80"
-                alt="Wedding editorial photography" loading="lazy" />
-            </div>
-            <div class="card-caption">
-              <h2 class="card-title">Weddings & Intimates</h2>
-              <span class="card-sub">View Gallery &rarr;</span>
-            </div>
-          </a>
-        </div>
+      <div class="film-carousel-viewport" id="filmCarouselViewport">
+        <div class="film-carousel-track">
+          <!-- Set 1 -->
+          <div class="film-set">
+            <a
+              href="weddings-editorial.html"
+              class="film-item"
+              aria-label="View The Vows & Twilight in Gallery"
+            >
+              <div class="film-card">
+                <div class="film-image-wrap">
+                  <img
+                    src="https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=800&q=80"
+                    alt="The Vows & Twilight couple embracing at sunset"
+                    loading="lazy"
+                  />
+                </div>
+                <div class="film-meta-box">
+                  <div class="film-top-row">
+                    <span>REF. 01 / 35MM</span>
+                    <span>Udaipur</span>
+                  </div>
+                  <div class="film-title-row">
+                    <h3 class="film-title">The Vows &amp; Twilight</h3>
+                    <span class="film-arrow">Gallery &rarr;</span>
+                  </div>
+                </div>
+              </div>
+            </a>
 
-        <div class="card-item" id="editorial">
-          <a href="weddings-editorial.html" class="card">
-            <div class="image-container">
-              <img src="https://images.unsplash.com/photo-1517457373958-b7bdd4587205?auto=format&fit=crop&w=1000&q=80"
-                alt="Editorial and pre-wedding photography" loading="lazy" />
-            </div>
-            <div class="card-caption">
-              <h2 class="card-title">Editorial & Private Dinners</h2>
-              <span class="card-sub">View Gallery &rarr;</span>
-            </div>
-          </a>
+            <a
+              href="weddings-editorial.html"
+              class="film-item"
+              aria-label="View Sacred Varmala Ritual in Gallery"
+            >
+              <div class="film-card">
+                <div class="film-image-wrap">
+                  <img
+                    src="https://images.unsplash.com/photo-1583939003579-730e3918a45a?auto=format&fit=crop&w=800&q=80"
+                    alt="Traditional bridal varmala ceremony"
+                    loading="lazy"
+                  />
+                </div>
+                <div class="film-meta-box">
+                  <div class="film-top-row">
+                    <span>REF. 02 / 35MM</span>
+                    <span>Jaipur</span>
+                  </div>
+                  <div class="film-title-row">
+                    <h3 class="film-title">Sacred Varmala Ritual</h3>
+                    <span class="film-arrow">Gallery &rarr;</span>
+                  </div>
+                </div>
+              </div>
+            </a>
+
+            <a
+              href="weddings-editorial.html"
+              class="film-item"
+              aria-label="View Heirloom Banquets in Gallery"
+            >
+              <div class="film-card">
+                <div class="film-image-wrap">
+                  <img
+                    src="https://images.unsplash.com/photo-1511285560929-80b456fea0bc?auto=format&fit=crop&w=800&q=80"
+                    alt="Heirloom celebration banquet details"
+                    loading="lazy"
+                  />
+                </div>
+                <div class="film-meta-box">
+                  <div class="film-top-row">
+                    <span>REF. 03 / 35MM</span>
+                    <span>Mumbai</span>
+                  </div>
+                  <div class="film-title-row">
+                    <h3 class="film-title">Heirloom Banquets</h3>
+                    <span class="film-arrow">Gallery &rarr;</span>
+                  </div>
+                </div>
+              </div>
+            </a>
+
+            <a
+              href="weddings-editorial.html"
+              class="film-item"
+              aria-label="View Emotional Vows Exchange in Gallery"
+            >
+              <div class="film-card">
+                <div class="film-image-wrap">
+                  <img
+                    src="https://images.unsplash.com/photo-1606800052052-a08af7148866?auto=format&fit=crop&w=800&q=80"
+                    alt="Emotional vows exchange"
+                    loading="lazy"
+                  />
+                </div>
+                <div class="film-meta-box">
+                  <div class="film-top-row">
+                    <span>REF. 04 / 35MM</span>
+                    <span>Delhi</span>
+                  </div>
+                  <div class="film-title-row">
+                    <h3 class="film-title">Emotional Vows</h3>
+                    <span class="film-arrow">Gallery &rarr;</span>
+                  </div>
+                </div>
+              </div>
+            </a>
+
+            <a
+              href="weddings-editorial.html"
+              class="film-item"
+              aria-label="View Fine Art Bride Portrait in Gallery"
+            >
+              <div class="film-card">
+                <div class="film-image-wrap">
+                  <img
+                    src="https://images.unsplash.com/photo-1520854221256-17451cc331bf?auto=format&fit=crop&w=800&q=80"
+                    alt="Fine art bridal portrait"
+                    loading="lazy"
+                  />
+                </div>
+                <div class="film-meta-box">
+                  <div class="film-top-row">
+                    <span>REF. 05 / 35MM</span>
+                    <span>Goa</span>
+                  </div>
+                  <div class="film-title-row">
+                    <h3 class="film-title">Bridal Silhouette</h3>
+                    <span class="film-arrow">Gallery &rarr;</span>
+                  </div>
+                </div>
+              </div>
+            </a>
+
+            <a
+              href="weddings-editorial.html"
+              class="film-item"
+              aria-label="View Monochrome Afterhours in Gallery"
+            >
+              <div class="film-card">
+                <div class="film-image-wrap">
+                  <img
+                    src="https://images.unsplash.com/photo-1532712938310-34cb3982ef74?auto=format&fit=crop&w=800&q=80"
+                    alt="Black and white reception party dance"
+                    loading="lazy"
+                  />
+                </div>
+                <div class="film-meta-box">
+                  <div class="film-top-row">
+                    <span>REF. 06 / 35MM</span>
+                    <span>Bangalore</span>
+                  </div>
+                  <div class="film-title-row">
+                    <h3 class="film-title">Monochrome Afterhours</h3>
+                    <span class="film-arrow">Gallery &rarr;</span>
+                  </div>
+                </div>
+              </div>
+            </a>
+
+            <a
+              href="weddings-editorial.html"
+              class="film-item"
+              aria-label="View Royal Courtyard Stroll in Gallery"
+            >
+              <div class="film-card">
+                <div class="film-image-wrap">
+                  <img
+                    src="https://images.unsplash.com/photo-1591604466107-ec97de577aff?auto=format&fit=crop&w=800&q=80"
+                    alt="Destination royal palace wedding celebration"
+                    loading="lazy"
+                  />
+                </div>
+                <div class="film-meta-box">
+                  <div class="film-top-row">
+                    <span>REF. 07 / 35MM</span>
+                    <span>Jodhpur</span>
+                  </div>
+                  <div class="film-title-row">
+                    <h3 class="film-title">Palace Courtyard</h3>
+                    <span class="film-arrow">Gallery &rarr;</span>
+                  </div>
+                </div>
+              </div>
+            </a>
+
+            <a
+              href="weddings-editorial.html"
+              class="film-item"
+              aria-label="View Editorial Couple Stroll in Gallery"
+            >
+              <div class="film-card">
+                <div class="film-image-wrap">
+                  <img
+                    src="https://images.unsplash.com/photo-1545232979-8bf68ee9b1af?auto=format&fit=crop&w=800&q=80"
+                    alt="Pre-wedding editorial couple stroll"
+                    loading="lazy"
+                  />
+                </div>
+                <div class="film-meta-box">
+                  <div class="film-top-row">
+                    <span>REF. 08 / 35MM</span>
+                    <span>Alibaug</span>
+                  </div>
+                  <div class="film-title-row">
+                    <h3 class="film-title">Editorial Stroll</h3>
+                    <span class="film-arrow">Gallery &rarr;</span>
+                  </div>
+                </div>
+              </div>
+            </a>
+
+            <a
+              href="weddings-editorial.html"
+              class="film-item"
+              aria-label="View Candlelit Gathering in Gallery"
+            >
+              <div class="film-card">
+                <div class="film-image-wrap">
+                  <img
+                    src="https://images.unsplash.com/photo-1517457373958-b7bdd4587205?auto=format&fit=crop&w=800&q=80"
+                    alt="Candlelit private wedding gathering"
+                    loading="lazy"
+                  />
+                </div>
+                <div class="film-meta-box">
+                  <div class="film-top-row">
+                    <span>REF. 09 / 35MM</span>
+                    <span>Pune</span>
+                  </div>
+                  <div class="film-title-row">
+                    <h3 class="film-title">Candlelit Intimacy</h3>
+                    <span class="film-arrow">Gallery &rarr;</span>
+                  </div>
+                </div>
+              </div>
+            </a>
+
+            <a
+              href="weddings-editorial.html"
+              class="film-item"
+              aria-label="View In-Between Moments in Gallery"
+            >
+              <div class="film-card">
+                <div class="film-image-wrap">
+                  <img
+                    src="https://images.unsplash.com/photo-1544078751-58fee2d8a03b?auto=format&fit=crop&w=800&q=80"
+                    alt="Quiet intimate moments together"
+                    loading="lazy"
+                  />
+                </div>
+                <div class="film-meta-box">
+                  <div class="film-top-row">
+                    <span>REF. 10 / 35MM</span>
+                    <span>Kerala</span>
+                  </div>
+                  <div class="film-title-row">
+                    <h3 class="film-title">In-Between Whispers</h3>
+                    <span class="film-arrow">Gallery &rarr;</span>
+                  </div>
+                </div>
+              </div>
+            </a>
+          </div>
+
+          <!-- Set 2 (Duplicate for Seamless Infinite Loop) -->
+          <div class="film-set" aria-hidden="true">
+            <a
+              href="weddings-editorial.html"
+              class="film-item"
+              tabindex="-1"
+            >
+              <div class="film-card">
+                <div class="film-image-wrap">
+                  <img
+                    src="https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=800&q=80"
+                    alt=""
+                    loading="lazy"
+                  />
+                </div>
+                <div class="film-meta-box">
+                  <div class="film-top-row">
+                    <span>REF. 01 / 35MM</span>
+                    <span>Udaipur</span>
+                  </div>
+                  <div class="film-title-row">
+                    <h3 class="film-title">The Vows &amp; Twilight</h3>
+                    <span class="film-arrow">Gallery &rarr;</span>
+                  </div>
+                </div>
+              </div>
+            </a>
+
+            <a
+              href="weddings-editorial.html"
+              class="film-item"
+              tabindex="-1"
+            >
+              <div class="film-card">
+                <div class="film-image-wrap">
+                  <img
+                    src="https://images.unsplash.com/photo-1583939003579-730e3918a45a?auto=format&fit=crop&w=800&q=80"
+                    alt=""
+                    loading="lazy"
+                  />
+                </div>
+                <div class="film-meta-box">
+                  <div class="film-top-row">
+                    <span>REF. 02 / 35MM</span>
+                    <span>Jaipur</span>
+                  </div>
+                  <div class="film-title-row">
+                    <h3 class="film-title">Sacred Varmala Ritual</h3>
+                    <span class="film-arrow">Gallery &rarr;</span>
+                  </div>
+                </div>
+              </div>
+            </a>
+
+            <a
+              href="weddings-editorial.html"
+              class="film-item"
+              tabindex="-1"
+            >
+              <div class="film-card">
+                <div class="film-image-wrap">
+                  <img
+                    src="https://images.unsplash.com/photo-1511285560929-80b456fea0bc?auto=format&fit=crop&w=800&q=80"
+                    alt=""
+                    loading="lazy"
+                  />
+                </div>
+                <div class="film-meta-box">
+                  <div class="film-top-row">
+                    <span>REF. 03 / 35MM</span>
+                    <span>Mumbai</span>
+                  </div>
+                  <div class="film-title-row">
+                    <h3 class="film-title">Heirloom Banquets</h3>
+                    <span class="film-arrow">Gallery &rarr;</span>
+                  </div>
+                </div>
+              </div>
+            </a>
+
+            <a
+              href="weddings-editorial.html"
+              class="film-item"
+              tabindex="-1"
+            >
+              <div class="film-card">
+                <div class="film-image-wrap">
+                  <img
+                    src="https://images.unsplash.com/photo-1606800052052-a08af7148866?auto=format&fit=crop&w=800&q=80"
+                    alt=""
+                    loading="lazy"
+                  />
+                </div>
+                <div class="film-meta-box">
+                  <div class="film-top-row">
+                    <span>REF. 04 / 35MM</span>
+                    <span>Delhi</span>
+                  </div>
+                  <div class="film-title-row">
+                    <h3 class="film-title">Emotional Vows</h3>
+                    <span class="film-arrow">Gallery &rarr;</span>
+                  </div>
+                </div>
+              </div>
+            </a>
+
+            <a
+              href="weddings-editorial.html"
+              class="film-item"
+              tabindex="-1"
+            >
+              <div class="film-card">
+                <div class="film-image-wrap">
+                  <img
+                    src="https://images.unsplash.com/photo-1520854221256-17451cc331bf?auto=format&fit=crop&w=800&q=80"
+                    alt=""
+                    loading="lazy"
+                  />
+                </div>
+                <div class="film-meta-box">
+                  <div class="film-top-row">
+                    <span>REF. 05 / 35MM</span>
+                    <span>Goa</span>
+                  </div>
+                  <div class="film-title-row">
+                    <h3 class="film-title">Bridal Silhouette</h3>
+                    <span class="film-arrow">Gallery &rarr;</span>
+                  </div>
+                </div>
+              </div>
+            </a>
+
+            <a
+              href="weddings-editorial.html"
+              class="film-item"
+              tabindex="-1"
+            >
+              <div class="film-card">
+                <div class="film-image-wrap">
+                  <img
+                    src="https://images.unsplash.com/photo-1532712938310-34cb3982ef74?auto=format&fit=crop&w=800&q=80"
+                    alt=""
+                    loading="lazy"
+                  />
+                </div>
+                <div class="film-meta-box">
+                  <div class="film-top-row">
+                    <span>REF. 06 / 35MM</span>
+                    <span>Bangalore</span>
+                  </div>
+                  <div class="film-title-row">
+                    <h3 class="film-title">Monochrome Afterhours</h3>
+                    <span class="film-arrow">Gallery &rarr;</span>
+                  </div>
+                </div>
+              </div>
+            </a>
+
+            <a
+              href="weddings-editorial.html"
+              class="film-item"
+              tabindex="-1"
+            >
+              <div class="film-card">
+                <div class="film-image-wrap">
+                  <img
+                    src="https://images.unsplash.com/photo-1591604466107-ec97de577aff?auto=format&fit=crop&w=800&q=80"
+                    alt=""
+                    loading="lazy"
+                  />
+                </div>
+                <div class="film-meta-box">
+                  <div class="film-top-row">
+                    <span>REF. 07 / 35MM</span>
+                    <span>Jodhpur</span>
+                  </div>
+                  <div class="film-title-row">
+                    <h3 class="film-title">Palace Courtyard</h3>
+                    <span class="film-arrow">Gallery &rarr;</span>
+                  </div>
+                </div>
+              </div>
+            </a>
+
+            <a
+              href="weddings-editorial.html"
+              class="film-item"
+              tabindex="-1"
+            >
+              <div class="film-card">
+                <div class="film-image-wrap">
+                  <img
+                    src="https://images.unsplash.com/photo-1545232979-8bf68ee9b1af?auto=format&fit=crop&w=800&q=80"
+                    alt=""
+                    loading="lazy"
+                  />
+                </div>
+                <div class="film-meta-box">
+                  <div class="film-top-row">
+                    <span>REF. 08 / 35MM</span>
+                    <span>Alibaug</span>
+                  </div>
+                  <div class="film-title-row">
+                    <h3 class="film-title">Editorial Stroll</h3>
+                    <span class="film-arrow">Gallery &rarr;</span>
+                  </div>
+                </div>
+              </div>
+            </a>
+
+            <a
+              href="weddings-editorial.html"
+              class="film-item"
+              tabindex="-1"
+            >
+              <div class="film-card">
+                <div class="film-image-wrap">
+                  <img
+                    src="https://images.unsplash.com/photo-1517457373958-b7bdd4587205?auto=format&fit=crop&w=800&q=80"
+                    alt=""
+                    loading="lazy"
+                  />
+                </div>
+                <div class="film-meta-box">
+                  <div class="film-top-row">
+                    <span>REF. 09 / 35MM</span>
+                    <span>Pune</span>
+                  </div>
+                  <div class="film-title-row">
+                    <h3 class="film-title">Candlelit Intimacy</h3>
+                    <span class="film-arrow">Gallery &rarr;</span>
+                  </div>
+                </div>
+              </div>
+            </a>
+
+            <a
+              href="weddings-editorial.html"
+              class="film-item"
+              tabindex="-1"
+            >
+              <div class="film-card">
+                <div class="film-image-wrap">
+                  <img
+                    src="https://images.unsplash.com/photo-1544078751-58fee2d8a03b?auto=format&fit=crop&w=800&q=80"
+                    alt=""
+                    loading="lazy"
+                  />
+                </div>
+                <div class="film-meta-box">
+                  <div class="film-top-row">
+                    <span>REF. 10 / 35MM</span>
+                    <span>Kerala</span>
+                  </div>
+                  <div class="film-title-row">
+                    <h3 class="film-title">In-Between Whispers</h3>
+                    <span class="film-arrow">Gallery &rarr;</span>
+                  </div>
+                </div>
+              </div>
+            </a>
+          </div>
         </div>
       </div>
     </section>

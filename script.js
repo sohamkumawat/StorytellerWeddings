@@ -234,59 +234,107 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  // Hero Image Carousel (Auto-rotates every 5 seconds with Arrow Navigation)
+  // Hero Image Carousel (Auto-rotates with Randomized Images & Ultra-Smooth Crossfade)
   const carouselTrack = document.getElementById("heroCarousel");
   if (carouselTrack) {
-    const slides = carouselTrack.querySelectorAll(".carousel-slide");
     const prevBtn = document.getElementById("heroCarouselPrev");
     const nextBtn = document.getElementById("heroCarouselNext");
+
+    // All 35 main carousel images
+    const mainCarouselImages = Array.from(
+      { length: 35 },
+      (_, i) => `assets/main-carousel/MainCarousel${i + 1}.webp`
+    );
+
+    // Fisher-Yates Shuffle
+    function shuffleArray(arr) {
+      const shuffled = [...arr];
+      for (let i = shuffled.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
+      }
+      return shuffled;
+    }
+
+    const randomizedImages = shuffleArray(mainCarouselImages);
+
+    // Dynamically populate slides with randomized image order
+    carouselTrack.innerHTML = "";
+    randomizedImages.forEach((imgSrc, idx) => {
+      const slideDiv = document.createElement("div");
+      slideDiv.className = `carousel-slide${idx === 0 ? " active" : ""}`;
+      const img = document.createElement("img");
+      img.src = imgSrc;
+      img.alt = `Storyteller Wedding Highlight ${idx + 1}`;
+      img.loading = idx === 0 ? "eager" : "lazy";
+      slideDiv.appendChild(img);
+      carouselTrack.appendChild(slideDiv);
+    });
+
+    const slides = Array.from(carouselTrack.querySelectorAll(".carousel-slide"));
     let currentSlide = 0;
     let carouselTimer = null;
+    let isTransitioning = false;
 
-    if (slides.length > 0) {
-      function updateSlideClasses() {
-        slides.forEach((slide, idx) => {
-          slide.classList.toggle("active", idx === currentSlide);
-        });
-      }
+    function goToSlide(newIndex) {
+      if (slides.length <= 1 || isTransitioning || newIndex === currentSlide) return;
+      isTransitioning = true;
 
-      function nextSlide() {
-        currentSlide = (currentSlide + 1) % slides.length;
-        updateSlideClasses();
-      }
+      const prevSlideEl = slides[currentSlide];
+      const nextSlideEl = slides[newIndex];
 
-      function prevSlide() {
-        currentSlide = (currentSlide - 1 + slides.length) % slides.length;
-        updateSlideClasses();
-      }
+      // Keep previous slide underneath during smooth crossfade
+      slides.forEach((s) => s.classList.remove("last-active"));
+      prevSlideEl.classList.add("last-active");
+      prevSlideEl.classList.remove("active");
 
-      function startCarouselTimer() {
-        carouselTimer = setInterval(nextSlide, 5000);
-      }
+      // Fade in new slide on top layer
+      nextSlideEl.classList.add("active");
 
-      function resetCarouselTimer() {
-        if (carouselTimer) clearInterval(carouselTimer);
-        startCarouselTimer();
-      }
+      currentSlide = newIndex;
 
-      if (prevBtn) {
-        prevBtn.addEventListener("click", (e) => {
-          e.stopPropagation();
-          prevSlide();
-          resetCarouselTimer();
-        });
-      }
+      setTimeout(() => {
+        prevSlideEl.classList.remove("last-active");
+        isTransitioning = false;
+      }, 1450);
+    }
 
-      if (nextBtn) {
-        nextBtn.addEventListener("click", (e) => {
-          e.stopPropagation();
-          nextSlide();
-          resetCarouselTimer();
-        });
-      }
+    function nextSlide() {
+      const nextIndex = (currentSlide + 1) % slides.length;
+      goToSlide(nextIndex);
+    }
 
+    function prevSlide() {
+      const prevIndex = (currentSlide - 1 + slides.length) % slides.length;
+      goToSlide(prevIndex);
+    }
+
+    function startCarouselTimer() {
+      carouselTimer = setInterval(nextSlide, 5000);
+    }
+
+    function resetCarouselTimer() {
+      if (carouselTimer) clearInterval(carouselTimer);
       startCarouselTimer();
     }
+
+    if (prevBtn) {
+      prevBtn.addEventListener("click", (e) => {
+        e.stopPropagation();
+        prevSlide();
+        resetCarouselTimer();
+      });
+    }
+
+    if (nextBtn) {
+      nextBtn.addEventListener("click", (e) => {
+        e.stopPropagation();
+        nextSlide();
+        resetCarouselTimer();
+      });
+    }
+
+    startCarouselTimer();
   }
 
   // Back to Top Handler

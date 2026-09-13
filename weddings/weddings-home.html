@@ -10,7 +10,7 @@
       name="description"
       content="Documentary wedding and intimate gathering photography based in Pune, available nationwide across India. Preserving honest emotion and heirloom legacy."
     />
-    <link rel="icon" type="image/png" href="../LogoFavicon.png" />
+    <link rel="icon" type="image/svg+xml" href="../MainLogo2.svg" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -23,31 +23,24 @@
 
   <body>
     <!-- Weddings Masthead & Navigation -->
-    <header class="wedding-masthead">
-      <div class="masthead-brand-wrap">
-        <a
-          href="weddings-home.html"
-          class="masthead-logo-link"
-          aria-label="Storyteller Home"
-        >
-          <img
-            style="width: auto; height: 85px"
-            src="../MainLogo.svg"
-            alt="Storyteller Weddings"
-            class="masthead-favicon"
-          />
-        </a>
-      </div>
-      <nav class="masthead-nav" aria-label="Weddings Navigation">
-        <ul class="masthead-nav-links">
-          <li><a href="weddings-home.html" class="active">Home</a></li>
-          <li><a href="weddings-editorial.html">Galleries</a></li>
-          <li><a href="#testimonials">Testimonials</a></li>
-          <li><a href="weddings-about.html">About</a></li>
-          <li><a href="weddings-inquire.html">Enquire</a></li>
-        </ul>
-      </nav>
-    </header>
+        <header class="nav">
+    <div class="logo-bar">
+      <a href="weddings-home.html" class="brand">
+        <img src="../LogoFavicon.png" alt="Storyteller Weddings" class="brand-logo" />
+        <span class="brand-text">Storyteller Weddings</span>
+      </a>
+    </div>
+    <div class="logo-break-line"></div>
+    <nav class="floating-navbar" aria-label="Navigation">
+      <ul class="nav-links">
+        <li><a href="weddings-home.html" class="active">Home</a></li>
+        <li><a href="weddings-editorial.html">Galleries</a></li>
+        <li><a href="#testimonials">Testimonials</a></li>
+        <li><a href="weddings-about.html">About</a></li>
+        <li><a href="weddings-inquire.html" class="btn-inquire">Enquire</a></li>
+      </ul>
+    </nav>
+  </header>
 
     <main>
       <!-- Hero Section -->
@@ -60,71 +53,36 @@
           <div class="hero-carousel-track" id="heroCarousel">
             <div class="carousel-slide active">
               <img
-                src="https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=1400&q=80"
-                alt="Bespoke sunset wedding couple"
+                src="assets/main-carousel/MainCarousel1.webp"
+                alt="Bespoke wedding moment 1"
                 loading="eager"
               />
             </div>
             <div class="carousel-slide">
               <img
-                src="https://images.unsplash.com/photo-1583939003579-730e3918a45a?auto=format&fit=crop&w=1400&q=80"
-                alt="Traditional bridal varmala ceremony"
+                src="assets/main-carousel/MainCarousel2.webp"
+                alt="Bespoke wedding moment 2"
                 loading="lazy"
               />
             </div>
             <div class="carousel-slide">
               <img
-                src="https://images.unsplash.com/photo-1511285560929-80b456fea0bc?auto=format&fit=crop&w=1400&q=80"
-                alt="Heirloom celebration banquet details"
+                src="assets/main-carousel/MainCarousel3.webp"
+                alt="Bespoke wedding moment 3"
                 loading="lazy"
               />
             </div>
             <div class="carousel-slide">
               <img
-                src="https://images.unsplash.com/photo-1606800052052-a08af7148866?auto=format&fit=crop&w=1400&q=80"
-                alt="Emotional vows exchange"
+                src="assets/main-carousel/MainCarousel4.webp"
+                alt="Bespoke wedding moment 4"
                 loading="lazy"
               />
             </div>
             <div class="carousel-slide">
               <img
-                src="https://images.unsplash.com/photo-1520854221256-17451cc331bf?auto=format&fit=crop&w=1400&q=80"
-                alt="Editorial fine art bride portrait"
-                loading="lazy"
-              />
-            </div>
-            <div class="carousel-slide">
-              <img
-                src="https://images.unsplash.com/photo-1532712938310-34cb3982ef74?auto=format&fit=crop&w=1400&q=80"
-                alt="Intimate black and white reception dance"
-                loading="lazy"
-              />
-            </div>
-            <div class="carousel-slide">
-              <img
-                src="https://images.unsplash.com/photo-1591604466107-ec97de577aff?auto=format&fit=crop&w=1400&q=80"
-                alt="Destination royal heritage palace wedding"
-                loading="lazy"
-              />
-            </div>
-            <div class="carousel-slide">
-              <img
-                src="https://images.unsplash.com/photo-1545232979-8bf68ee9b1af?auto=format&fit=crop&w=1400&q=80"
-                alt="Pre-wedding editorial couple stroll"
-                loading="lazy"
-              />
-            </div>
-            <div class="carousel-slide">
-              <img
-                src="https://images.unsplash.com/photo-1517457373958-b7bdd4587205?auto=format&fit=crop&w=1400&q=80"
-                alt="Candlelit private wedding gathering"
-                loading="lazy"
-              />
-            </div>
-            <div class="carousel-slide">
-              <img
-                src="https://images.unsplash.com/photo-1544078751-58fee2d8a03b?auto=format&fit=crop&w=1400&q=80"
-                alt="Quiet intimate connection"
+                src="assets/main-carousel/MainCarousel5.webp"
+                alt="Bespoke wedding moment 5"
                 loading="lazy"
               />
             </div>
@@ -176,9 +134,7 @@
             The heirloom jewelry, the shared vows, the quiet chaos of
             celebration.<br />
             When the day becomes yesterday, your images are all that keep the
-            room alive.<br />
-            Not staged perfection&mdash;just the honest, elevated truth of who
-            you are.
+            room alive.
           </p>
           <p class="hero-tagline">
             &ldquo;Documenting the poetry hidden inside reality.&rdquo;
@@ -186,43 +142,81 @@
         </div>
       </section>
 
-      <!-- Selected Wedding Disciplines -->
-      <section class="portfolio-section" id="portfolio">
-        <div class="section-header">
-          <span class="section-tag">01 / Curated Disciplines</span>
-        </div>
+      <!-- Infinite Grid Carousel -->
+      <section
+        class="film-carousel-section"
+        id="portfolio"
+        aria-label="Curated Wedding Grid Showcase"
+      >
+        <div class="film-carousel-viewport" id="filmCarouselViewport">
+          <div class="film-carousel-track">
+            <!-- Set 1 -->
+            <div class="film-set">
+              <img
+                src="assets/grid-carousel/CarouselGrid1.webp"
+                alt="Wedding editorial showcase moment 1"
+                loading="eager"
+              />
+              <img
+                src="assets/grid-carousel/CarouselGrid2.webp"
+                alt="Wedding editorial showcase moment 2"
+                loading="lazy"
+              />
+              <img
+                src="assets/grid-carousel/CarouselGrid3.webp"
+                alt="Wedding editorial showcase moment 3"
+                loading="lazy"
+              />
+              <img
+                src="assets/grid-carousel/CarouselGrid4.webp"
+                alt="Wedding editorial showcase moment 4"
+                loading="lazy"
+              />
+              <img
+                src="assets/grid-carousel/CarouselGrid5.webp"
+                alt="Wedding editorial showcase moment 5"
+                loading="lazy"
+              />
+              <img
+                src="assets/grid-carousel/CarouselGrid6.webp"
+                alt="Wedding editorial showcase moment 6"
+                loading="lazy"
+              />
+            </div>
 
-        <div class="cards-grid">
-          <div class="card-item" id="weddings">
-            <a href="weddings-editorial.html" class="card">
-              <div class="image-container">
-                <img
-                  src="https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=1000&q=80"
-                  alt="Wedding editorial photography"
-                  loading="lazy"
-                />
-              </div>
-              <div class="card-caption">
-                <h2 class="card-title">Weddings & Intimates</h2>
-                <span class="card-sub">View Gallery &rarr;</span>
-              </div>
-            </a>
-          </div>
-
-          <div class="card-item" id="editorial">
-            <a href="weddings-editorial.html" class="card">
-              <div class="image-container">
-                <img
-                  src="https://images.unsplash.com/photo-1517457373958-b7bdd4587205?auto=format&fit=crop&w=1000&q=80"
-                  alt="Editorial and pre-wedding photography"
-                  loading="lazy"
-                />
-              </div>
-              <div class="card-caption">
-                <h2 class="card-title">Editorial & Private Dinners</h2>
-                <span class="card-sub">View Gallery &rarr;</span>
-              </div>
-            </a>
+            <!-- Set 2 (Duplicate for Seamless Infinite Loop) -->
+            <div class="film-set" aria-hidden="true">
+              <img
+                src="assets/grid-carousel/CarouselGrid1.webp"
+                alt=""
+                loading="lazy"
+              />
+              <img
+                src="assets/grid-carousel/CarouselGrid2.webp"
+                alt=""
+                loading="lazy"
+              />
+              <img
+                src="assets/grid-carousel/CarouselGrid3.webp"
+                alt=""
+                loading="lazy"
+              />
+              <img
+                src="assets/grid-carousel/CarouselGrid4.webp"
+                alt=""
+                loading="lazy"
+              />
+              <img
+                src="assets/grid-carousel/CarouselGrid5.webp"
+                alt=""
+                loading="lazy"
+              />
+              <img
+                src="assets/grid-carousel/CarouselGrid6.webp"
+                alt=""
+                loading="lazy"
+              />
+            </div>
           </div>
         </div>
       </section>

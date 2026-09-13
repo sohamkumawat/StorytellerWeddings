@@ -30,96 +30,111 @@ a {
   color: inherit;
 }
 
-/* --- Centered Editorial Masthead Navigation (Universal Across All Pages) --- */
+/* --- Navigation Bar (Fixed Top Navbar - Old Design) --- */
 .wedding-masthead,
 .site-masthead,
 .nav {
+  position: fixed;
+  top: 0;
+  left: 0;
   width: 100%;
+  height: 72px;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
-  justify-content: center;
-  text-align: center;
-  padding: 3.5rem 0 2.2rem 0;
-  background-color: var(--bg-color);
-  position: relative;
-  z-index: 50;
-  border: none;
-  margin-bottom: 2rem;
-  height: auto;
+  justify-content: space-between;
+  padding: 0 5vw;
+  background: rgba(249, 249, 247, 0.85);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--border-color);
+  z-index: 100;
+  margin-bottom: 0;
   box-sizing: border-box;
 }
 
 .masthead-brand-wrap,
 .brand {
-  display: flex;
-  flex-direction: column;
+  display: inline-flex;
+  flex-direction: row;
   align-items: center;
-  justify-content: center;
-  text-align: center;
   gap: 0.75rem;
-  margin-bottom: 1.5rem;
-  /* transition:
-    transform 0.4s cubic-bezier(0.16, 1, 0.3, 1),
-    opacity 0.3s ease; */
+  font-family: var(--font-serif);
+  font-size: 1.25rem;
+  font-weight: 500;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--text-main);
+  transition: var(--transition);
+  margin-bottom: 0;
+  text-decoration: none;
 }
 
-/* .masthead-brand-wrap:hover,
+.masthead-brand-wrap:hover,
 .brand:hover {
-  transform: scale(1.04);
-  opacity: 0.88;
-} */
+  opacity: 0.82;
+  transform: none;
+}
 
 .masthead-logo-link {
   display: inline-flex;
   align-items: center;
-  justify-content: center;
-  /* transition:
-    transform 0.4s cubic-bezier(0.16, 1, 0.3, 1),
-    opacity 0.3s ease; */
+  gap: 0.75rem;
+  font-family: var(--font-serif);
+  font-size: 1.25rem;
+  font-weight: 500;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--text-main);
+  text-decoration: none;
+  transition: var(--transition);
 }
 
 .masthead-logo-link:hover {
-  transform: scale(1.04);
-  opacity: 0.88;
+  opacity: 0.82;
+  transform: none;
 }
 
 .masthead-favicon,
 .brand-logo {
-  width: auto;
-  height: 85px;
-  max-height: 85px;
+  width: 34px;
+  height: 34px;
+  max-height: 34px;
   object-fit: contain;
   display: block;
 }
 
 .masthead-brand-title,
 .brand-text {
-  display: none;
+  display: inline-block;
+  font-family: var(--font-serif);
+  font-size: 1.25rem;
+  font-weight: 500;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--text-main);
 }
 
 .masthead-nav,
 .nav-links {
-  width: 70vw;
-  max-width: 70vw;
+  width: auto;
+  max-width: none;
   display: flex;
   align-items: center;
-  justify-content: center;
-  margin: 0 auto;
+  gap: 2.2rem;
+  list-style: none;
+  margin: 0;
   padding: 0;
   border: none;
-  box-sizing: border-box;
 }
 
 .masthead-nav-links {
-  width: 100%;
+  width: auto;
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  gap: clamp(1rem, 2.5vw, 3rem);
+  gap: 2.2rem;
   list-style: none;
-  flex-wrap: wrap;
-  margin: 0 auto;
+  margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
@@ -133,15 +148,15 @@ a {
 .masthead-nav-links a,
 .nav-links a {
   font-family: var(--font-sans);
-  font-size: clamp(0.75rem, 0.9vw, 0.9rem);
-  font-weight: 375;
-  letter-spacing: 0.14em;
-  text-transform: uppercase;
+  font-size: 0.85rem;
+  font-weight: 500;
+  letter-spacing: 0.05em;
   color: var(--text-muted);
-  position: relative;
-  padding: 0.4rem 0;
   transition: var(--transition);
+  position: relative;
+  padding: 0;
   white-space: nowrap;
+  text-decoration: none;
 }
 
 .masthead-nav-links a:hover,
@@ -152,93 +167,122 @@ a {
 .masthead-nav-links a.active,
 .nav-links a.active {
   color: var(--text-main);
-  font-weight: 500;
+  font-weight: 600;
 }
 
 .masthead-nav-links a.active::after,
 .nav-links a.active::after {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 1px;
-  background-color: var(--text-main);
+  display: none;
 }
 
+.btn-inquire,
 .masthead-nav-links .btn-inquire,
 .nav-links .btn-inquire {
-  padding: 0.4rem 0;
-  border: none;
+  padding: 10px 22px;
+  border: 1px solid var(--text-main);
   border-radius: 0px;
-  color: var(--text-muted) !important;
-  font-size: clamp(0.8rem, 0.95vw, 0.92rem);
-  letter-spacing: 0.14em;
-  display: inline-block;
+  color: var(--text-main) !important;
+  transition: var(--transition);
+  text-transform: uppercase;
+  font-size: 0.78rem;
+  letter-spacing: 0.1em;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   background-color: transparent;
+  text-decoration: none;
 }
 
+.btn-inquire:hover,
 .masthead-nav-links .btn-inquire:hover,
 .nav-links .btn-inquire:hover {
-  background-color: transparent;
-  color: var(--text-main) !important;
+  background-color: var(--text-main);
+  color: var(--bg-color) !important;
 }
 
+.btn-inquire.active::after,
 .masthead-nav-links .btn-inquire.active::after,
 .nav-links .btn-inquire.active::after {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 1px;
-  background-color: var(--text-main);
+  display: none;
 }
 
 @media (max-width: 768px) {
   .wedding-masthead,
   .site-masthead,
   .nav {
-    padding: 2.2rem 1.25rem 1.2rem;
-    margin-bottom: 1.2rem;
+    padding: 0 1.5rem;
+    height: 64px;
   }
 
   .masthead-favicon,
   .brand-logo {
-    width: auto;
-    height: 65px;
-    max-height: 65px;
+    width: 28px;
+    height: 28px;
+    max-height: 28px;
   }
 
-  .masthead-brand-wrap,
-  .brand {
-    gap: 0.55rem;
-    margin-bottom: 1rem;
+  .masthead-brand-title,
+  .brand-text {
+    font-size: 1.08rem;
+    letter-spacing: 0.12em;
   }
 
   .masthead-nav,
-  .nav-links {
-    width: 90vw;
-    max-width: 90vw;
-    padding-top: 0;
-    border: none;
-  }
-
+  .nav-links,
   .masthead-nav-links {
-    justify-content: center;
-    gap: 0.9rem 1.4rem;
+    gap: 1.2rem;
   }
 
   .masthead-nav-links a,
   .nav-links a {
-    font-size: 0.76rem;
+    font-size: 0.78rem;
+  }
+
+  .btn-inquire,
+  .masthead-nav-links .btn-inquire,
+  .nav-links .btn-inquire {
+    padding: 6px 14px;
+    font-size: 0.72rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .wedding-masthead,
+  .site-masthead,
+  .nav {
+    padding: 0 1rem;
+  }
+
+  .masthead-favicon,
+  .brand-logo {
+    width: 22px;
+    height: 22px;
+    max-height: 22px;
+  }
+
+  .masthead-brand-title,
+  .brand-text {
+    font-size: 0.95rem;
     letter-spacing: 0.08em;
   }
 
+  .masthead-nav,
+  .nav-links,
+  .masthead-nav-links {
+    gap: 0.75rem;
+  }
+
+  .masthead-nav-links a,
+  .nav-links a {
+    font-size: 0.72rem;
+    letter-spacing: 0.02em;
+  }
+
+  .btn-inquire,
   .masthead-nav-links .btn-inquire,
   .nav-links .btn-inquire {
-    padding: 0.35rem 0;
-    font-size: 0.76rem;
+    padding: 5px 10px;
+    font-size: 0.68rem;
   }
 }
 
@@ -250,8 +294,9 @@ a {
   align-items: center;
   justify-content: center;
   text-align: center;
-  padding: 0 1.5rem;
+  padding: 72px 1.5rem 0;
   position: relative;
+  box-sizing: border-box;
 }
 
 .hero-content {
@@ -318,7 +363,7 @@ a {
 .hero-wedding {
   height: auto !important;
   min-height: auto !important;
-  padding: 1.5rem 5vw 4.5rem 5vw;
+  padding: calc(72px + 2.5rem) 5vw 4.5rem 5vw;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -359,16 +404,21 @@ a {
   height: 100%;
   opacity: 0;
   visibility: hidden;
-  transition:
-    opacity 0.9s cubic-bezier(0.4, 0, 0.2, 1),
-    transform 1.4s cubic-bezier(0.16, 1, 0.3, 1);
-  transform: scale(1.03);
+  z-index: 1;
+  transition: opacity 1.4s cubic-bezier(0.4, 0, 0.2, 1),
+    visibility 1.4s linear;
+  will-change: opacity, transform;
 }
 
 .carousel-slide.active {
   opacity: 1;
   visibility: visible;
-  transform: scale(1);
+  z-index: 3;
+}
+
+.carousel-slide.last-active {
+  opacity: 1;
+  visibility: visible;
   z-index: 2;
 }
 
@@ -378,6 +428,13 @@ a {
   object-fit: cover;
   object-position: center 30%;
   display: block;
+  transform: scale(1.04);
+  transition: transform 6s cubic-bezier(0.25, 1, 0.5, 1);
+  will-change: transform;
+}
+
+.carousel-slide.active img {
+  transform: scale(1);
 }
 
 /* Luxury Carousel Navigation Arrows */
@@ -487,7 +544,7 @@ a {
 
 @media (max-width: 768px) {
   .hero-wedding {
-    padding-top: 1rem;
+    padding-top: calc(64px + 1.8rem);
     padding-bottom: 2.5rem;
     gap: 1.5rem;
   }
@@ -611,6 +668,95 @@ a {
   text-transform: uppercase;
   letter-spacing: 0.1em;
   color: var(--text-muted);
+}
+
+/* --- Infinite Film Reel Carousel Section --- */
+.film-carousel-section {
+  padding: 3rem 0;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+  background-color: transparent;
+  pointer-events: none;
+  user-select: none;
+}
+
+.film-carousel-viewport {
+  width: 90%;
+  margin: 0 auto;
+  overflow: hidden;
+  position: relative;
+  padding: 0;
+  -webkit-mask-image: none;
+  mask-image: none;
+  pointer-events: none;
+}
+
+.film-carousel-track {
+  display: flex;
+  width: max-content;
+  gap: 0;
+  margin: 0;
+  padding: 0;
+  user-select: none;
+  pointer-events: none;
+}
+
+.film-set {
+  display: flex;
+  gap: 0;
+  margin: 0;
+  padding: 0;
+  flex-shrink: 0;
+  animation: filmReelScroll 35s linear infinite !important;
+  will-change: transform;
+  pointer-events: none;
+}
+
+@keyframes filmReelScroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+.film-set img {
+  height: 560px;
+  width: auto;
+  display: block;
+  object-fit: contain;
+  margin: 0;
+  padding: 0;
+  border: none;
+  border-radius: 0;
+  box-shadow: none;
+  vertical-align: middle;
+  pointer-events: none;
+  -webkit-user-drag: none;
+  user-select: none;
+}
+
+/* Responsive: 100% width on smaller screens */
+@media (max-width: 991px) {
+  .film-carousel-section {
+    padding: 2.5rem 0;
+  }
+
+  .film-carousel-viewport {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+
+  .film-set img {
+    height: 360px;
+  }
+
+  .film-set {
+    animation-duration: 28s !important;
+  }
 }
 
 /* --- Testimonials Section (Editorial Love Notes) --- */
@@ -1520,15 +1666,15 @@ a {
 
 @media (max-width: 580px) {
   .brand {
-    font-size: 0.85rem;
+    font-size: 0.95rem;
     letter-spacing: 0.14em;
     gap: 0.65rem;
   }
 
   .brand-logo {
-    width: auto;
-    height: 42px;
-    max-height: 42px;
+    width: 22px;
+    height: 22px;
+    max-height: 22px;
   }
 
   .site-footer {
@@ -1653,7 +1799,7 @@ a {
    ========================================================================== */
 
 .page-wrapper {
-  padding-top: 0; /* Nav is static centered masthead */
+  padding-top: 72px; /* Top offset for fixed navbar */
   min-height: 100vh;
 }
 
@@ -2067,7 +2213,7 @@ a {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 1.5rem 5vw 6rem;
+  padding: 6.5rem 5vw 6rem;
   background-color: var(--bg-color);
   text-align: center;
 }
